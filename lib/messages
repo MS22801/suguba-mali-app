@@ -1,0 +1,4 @@
+الحقل النوع الوصف
+sender_id DocumentReference المرسل
+text String نص الرسالة
+timestamp Timestamp وقت الإرسال
