@@ -1,0 +1,11 @@
+الحقل النوع الوصف
+uid String معرف المستخدم من Firebase Auth
+phone String رقم الهاتف (اختياري)
+display_name String الاسم الظاهر
+avatar_url String صورة الملف الشخصي
+location LatLng إحداثيات الموقع (للإعلانات القريبة)
+city String المدينة (بماكو، كايس، سيكاسو...)
+reputation number متوسط التقييمات (1-5)
+created_at Timestamp تاريخ التسجيل
+language_pref String اللغة المفضلة (ar, fr, en)
+currency_pref String العملة المفضلة (XOF, USD, EUR)
