@@ -1,0 +1,5 @@
+double convertPrice(double amountInXOF, String targetCurrency) {
+  const rates = {'XOF': 1.0, 'USD': 610.0, 'EUR': 656.0};
+  double rate = rates[targetCurrency] ?? 1;
+  return amountInXOF / rate;
+}
