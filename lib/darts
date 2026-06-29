@@ -1,0 +1,41 @@
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart'; // أضفها للمشروع
+
+class AppLocalizations {
+  final Locale locale;
+  AppLocalizations(this.locale);
+
+  static AppLocalizations of(BuildContext context) =>
+      Localizations.of<AppLocalizations>(context, AppLocalizations)!;
+
+  static const _localizedValues = {
+    'ar': {
+      'appTitle': 'سوق سوغوبا مالي',
+      'sell': 'بيع',
+      'buy': 'شراء',
+      'currency': 'العملة',
+      'changeLang': 'تغيير اللغة',
+      'welcome': 'أهلاً بك في سوغوبا',
+    },
+    'fr': {
+      'appTitle': 'Suguba Mali',
+      'sell': 'Vendre',
+      'buy': 'Acheter',
+      'currency': 'Devise',
+      'changeLang': 'Changer de langue',
+      'welcome': 'Bienvenue sur Suguba',
+    },
+    'en': {
+      'appTitle': 'Suguba Mali',
+      'sell': 'Sell',
+      'buy': 'Buy',
+      'currency': 'Currency',
+      'changeLang': 'Change Language',
+      'welcome': 'Welcome to Suguba',
+    },
+  };
+
+  String get appTitle => _localizedValues[locale.languageCode]!['appTitle']!;
+  String get sell => _localizedValues[locale.languageCode]!['sell']!;
+  // ... أكمل باقي النصوص
+}
