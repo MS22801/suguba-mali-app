@@ -1,0 +1,39 @@
+class SugubaApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'SUGUBA MALI',
+      locale: Locale('fr'), // سيتغير بحسب اختيار المستخدم
+      supportedLocales: [Locale('ar'), Locale('fr'), Locale('en')],
+      localizationsDelegates: [
+        AppLocalizations.delegate, // ستحتاج لكتابة delegate كامل
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      home: MainScreen(),
+    );
+  }
+}
+
+class MainScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var loc = AppLocalizations.of(context);
+    return Scaffold(
+      appBar: AppBar(title: Text(loc.appTitle)),
+      body: Center(child: Text(loc.welcome)),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            ListTile(title: Text(loc.changeLang), onTap: () {
+              // عرض خيارات العربية، الفرنسية، الإنجليزية
+            }),
+            ListTile(title: Text(loc.currency), onTap: () {
+              // تخيير العملة وتخزينها في إعدادات التطبيق
+            }),
+          ],
+        ),
+      ),
+    );
+  }
+}
