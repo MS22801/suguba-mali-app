@@ -1,0 +1,13 @@
+الحقل النوع الوصف
+title String عنوان الإعلان
+description String الوصف
+price number السعر (بالفرنك سيفا دائماً للتخزين)
+currency String العملة المعروضة في الواجهة (حسب تفضيل المستخدم)
+category String تصنيف (عقارات، سيارات، إلكترونيات...)
+images List<String> روابط الصور
+video_url String رابط الفيديو (اختياري)
+seller_id DocumentReference ربط مع المستخدم البائع
+status String (active, sold, archived)
+location LatLng موقع الإعلان
+created_at Timestamp تاريخ النشر
+views number عدد المشاهدات
